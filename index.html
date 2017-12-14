@@ -836,7 +836,11 @@
             birdUniforms.time.value = now;
             birdUniforms.delta.value = delta;
 
-            velocityUniforms.predator.value.set( 0.5 * 0 / windowHalfX, - 0.5 * 0 / windowHalfY, 0 );
+            if(mouseX > 9000)
+                mouseX = 0;
+            if(mouseY > 9000)
+                mouseY = 0;
+            velocityUniforms.predator.value.set( 0.5 * mouseX / windowHalfX, - 0.5 * mouseY / windowHalfY, 0 );
 
 				mouseX = 10000;
 				mouseY = 10000;
